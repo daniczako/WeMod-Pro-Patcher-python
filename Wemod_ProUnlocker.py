@@ -33,8 +33,8 @@ def wait_and_clear():
 
 # Function to patch the app
 def patch_app():
-    app_folders = glob.glob(os.path.join(user_directory, 'AppData', 'Local', 'WeMod', 'app-*'))
-    print(f"Searching for WeMod app folders in: {os.path.join(user_directory, 'AppData', 'Local', 'WeMod')}")  # Debugging log
+    app_folders = glob.glob(os.path.join(user_directory, 'AppData', 'Local', 'Wand', 'app-*'))
+    print(f"Searching for Wand app folders in: {os.path.join(user_directory, 'AppData', 'Local', 'Wand')}")  # Debugging log
 
     if not app_folders:
         print(f"{Fore.RED}Error: No app- folders found.")
@@ -86,7 +86,7 @@ def restore_app():
             print(f"Restoring version: {version}")  # Debugging log
 
             source_path = os.path.join(backup_folder, backup_file)
-            destination_path = os.path.join(user_directory, 'AppData', 'Local', 'WeMod', f'app-{version}', 'resources', 'app.asar')
+            destination_path = os.path.join(user_directory, 'AppData', 'Local', 'Wand', f'app-{version}', 'resources', 'app.asar')
 
             print(f"Restoring from {source_path} to {destination_path}")  # Debugging log
 
